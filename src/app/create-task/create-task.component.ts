@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-create-form',
-  templateUrl: './create-form.component.html',
-  styleUrls: ['./create-form.component.css']
+  selector: 'app-create-task',
+  templateUrl: './create-task.component.html',
+  styleUrls: ['./create-task.component.css']
 })
-export class CreateFormComponent implements OnInit {
+export class CreateTaskComponent implements OnInit {
   @Output() taskAdded = new EventEmitter();
   task = {
     title: '',

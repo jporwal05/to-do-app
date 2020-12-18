@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-card',
-  templateUrl: './card.component.html',
-  styleUrls: ['./card.component.css']
+  selector: 'app-task',
+  templateUrl: './task.component.html',
+  styleUrls: ['./task.component.css']
 })
-export class CardComponent implements OnInit {
+export class TaskComponent implements OnInit {
   @Input() task: any;
   @Output() delete = new EventEmitter();
   originalTask: any;
