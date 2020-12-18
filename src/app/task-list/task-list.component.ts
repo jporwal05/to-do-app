@@ -1,11 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-card-list',
-  templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.css']
+  selector: 'app-task-list',
+  templateUrl: './task-list.component.html',
+  styleUrls: ['./task-list.component.css']
 })
-export class CardListComponent implements OnInit {
+export class TaskListComponent implements OnInit {
   @Input() taskList: any;
 
   constructor() { }

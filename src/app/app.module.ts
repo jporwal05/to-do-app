@@ -3,16 +3,16 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './card/card.component';
-import { CardListComponent } from './card-list/card-list.component';
-import { CreateFormComponent } from './create-form/create-form.component';
+import { TaskComponent } from './task/task.component';
+import { TaskListComponent } from './task-list/task-list.component';
+import { CreateTaskComponent } from './create-task/create-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
-    CardListComponent,
-    CreateFormComponent
+    TaskComponent,
+    TaskListComponent,
+    CreateTaskComponent
   ],
   imports: [
     BrowserModule,
