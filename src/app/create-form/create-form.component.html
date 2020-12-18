@@ -1,0 +1,15 @@
+<form #createForm="ngForm" (ngSubmit)="onSubmit(createForm.value)">
+    <ul>
+        <li>
+            <label for="title">Title</label>
+            <input type="text" name="title" id="name" ngModel>
+        </li>
+        <li>
+            <label for="task">Task</label>
+            <textarea name="task" id="task" cols="30" rows="5" ngModel></textarea>
+        </li>
+    </ul>
+    <button>Cancel</button>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+</form>
