@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'to-do-app';
+  showCreateForm = false;
+  disableCancel = true;
+
+  onCreateClicked() {
+    this.showCreateForm = true;
+    this.disableCancel = false;
+  }
+
+  onCancelClicked() {
+    this.showCreateForm = false;
+    this.disableCancel = true;
+  }
 }

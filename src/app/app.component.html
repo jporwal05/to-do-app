@@ -1,3 +1,6 @@
-<button>Create</button>
-<app-create-form></app-create-form>
+<button (click)="onCreateClicked()">Create</button>
+<button [disabled]="disableCancel" (click)="onCancelClicked()">Cancel</button>
+<div *ngIf="showCreateForm">
+    <app-create-form></app-create-form>
+</div>
 <app-manage></app-manage>
