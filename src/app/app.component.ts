@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'to-do-app';
   showCreateForm = false;
   disableCancel = true;
+  taskList: {title: string, content: string}[] = [];
 
   onCreateClicked() {
     this.showCreateForm = true;
@@ -18,5 +19,10 @@ export class AppComponent {
   onCancelClicked() {
     this.showCreateForm = false;
     this.disableCancel = true;
+  }
+
+  onTaskAdded(task: any) {
+    this.taskList.push(task);
+    console.log(this.taskList);
   }
 }
