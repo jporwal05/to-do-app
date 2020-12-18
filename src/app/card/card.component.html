@@ -1,9 +1,9 @@
 <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
     <ul>
-        <li><input type="text" name="title" [(ngModel)]="task.title" [readonly]="readOnly"></li>
-        <li><textarea name="content" id="content" cols="30" rows="5" [readonly]="readOnly" [(ngModel)]="task.content"></textarea></li>
+        <li><input type="text" name="title" [(ngModel)]="task.title" [readonly]="readOnly" required></li>
+        <li><textarea name="content" id="content" cols="30" rows="5" [readonly]="readOnly" [(ngModel)]="task.content" required></textarea></li>
     </ul>
-    <button type="submit" [hidden]="readOnly">Save</button>
+    <button type="submit" [disabled]="!editForm.form.valid" [hidden]="readOnly">Save</button>
     <button type="button" [hidden]="readOnly" (click)="onCancelClicked()">Cancel</button>
 </form>
 <button (click)="onEditClicked()">Edit</button>

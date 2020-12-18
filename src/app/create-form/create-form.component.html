@@ -2,13 +2,13 @@
     <ul>
         <li>
             <label for="title">Title</label>
-            <input type="text" name="title" id="name" ngModel>
+            <input type="text" name="title" id="name" ngModel required>
         </li>
         <li>
             <label for="content">Content</label>
-            <textarea name="content" id="content" cols="30" rows="5" ngModel></textarea>
+            <textarea name="content" id="content" cols="30" rows="5" ngModel required></textarea>
         </li>
     </ul>
     <button type="reset">Reset</button>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!createForm.form.valid">Submit</button>
 </form>
