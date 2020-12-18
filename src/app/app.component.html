@@ -1,6 +1,6 @@
 <button (click)="onCreateClicked()">Create</button>
 <button [disabled]="disableCancel" (click)="onCancelClicked()">Cancel</button>
 <div *ngIf="showCreateForm">
-    <app-create-form></app-create-form>
+    <app-create-form (taskAdded)="onTaskAdded($event)"></app-create-form>
 </div>
 <app-manage></app-manage>

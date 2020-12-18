@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Form } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-create-form',
@@ -7,7 +6,11 @@ import { Form } from '@angular/forms';
   styleUrls: ['./create-form.component.css']
 })
 export class CreateFormComponent implements OnInit {
-  tasks: { title: string, task: string }[] = [];
+  @Output() taskAdded = new EventEmitter();
+  task = {
+    title: '',
+    content: ''
+  };
 
   constructor() { }
 
@@ -15,11 +18,11 @@ export class CreateFormComponent implements OnInit {
   }
 
   onSubmit(createForm: any) {
-    this.tasks.push({
+    this.task = {
       title: createForm.title,
-      task: createForm.task
-    })
-    console.log(this.tasks);
+      content: createForm.content
+    };
+    this.taskAdded.emit(this.task);
   }
 
 }
