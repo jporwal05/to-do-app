@@ -23,6 +23,5 @@ export class AppComponent {
 
   onTaskAdded(task: any) {
     this.taskList.push(task);
-    console.log(this.taskList);
   }
 }

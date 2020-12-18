@@ -3,4 +3,5 @@
 <div *ngIf="showCreateForm">
     <app-create-form (taskAdded)="onTaskAdded($event)"></app-create-form>
 </div>
-<app-manage></app-manage>
+<hr>
+<app-card-list [taskList]="taskList"></app-card-list>
