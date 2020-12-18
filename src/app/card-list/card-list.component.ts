@@ -13,4 +13,11 @@ export class CardListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(task: any) {
+    const index = this.taskList.indexOf(task);
+    if (index >= 0) {
+      this.taskList.splice(index, 1);
+    }
+  }
+
 }
