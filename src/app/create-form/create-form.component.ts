@@ -7,14 +7,19 @@ import { Form } from '@angular/forms';
   styleUrls: ['./create-form.component.css']
 })
 export class CreateFormComponent implements OnInit {
+  tasks: { title: string, task: string }[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(createForm: Form) {
-    console.log(createForm);
+  onSubmit(createForm: any) {
+    this.tasks.push({
+      title: createForm.title,
+      task: createForm.task
+    })
+    console.log(this.tasks);
   }
 
 }
