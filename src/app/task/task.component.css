@@ -16,3 +16,7 @@ textarea {
     width: 30%;
     border-radius: 2%;
 }
+
+.tda-task-div:hover {
+    background-color: #e6b800;
+}
