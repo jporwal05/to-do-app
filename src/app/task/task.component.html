@@ -9,13 +9,13 @@
         </div>
         <div>
             <button class="btn btn-success tda-button" type="submit" [disabled]="!editForm.form.valid"
-                [hidden]="readOnly"><i class="bi bi-check"></i></button>
+                [hidden]="readOnly"><i class="bi bi-check"></i><span class="tda-tooltip-text">Save</span></button>
             <button class="btn btn-warning tda-button" type="button" [hidden]="readOnly" (click)="onCancelClicked()"><i
-                    class="bi bi-arrow-bar-left"></i></button>
+                    class="bi bi-arrow-bar-left"></i><span class="tda-tooltip-text">Cancel</span></button>
             <button class="btn btn-info tda-button" type="button" (click)="onEditClicked()" [disabled]="!readOnly"><i
-                    class="bi bi-pencil-square"></i></button>
+                    class="bi bi-pencil-square"></i><span class="tda-tooltip-text">Edit</span></button>
             <button class="btn btn-danger tda-button" type="button" (click)="onDeleteClicked()"><i
-                    class="bi bi-x"></i></button>
+                    class="bi bi-x"></i><span class="tda-tooltip-text">Remove</span></button>
         </div>
     </form>
 </div>

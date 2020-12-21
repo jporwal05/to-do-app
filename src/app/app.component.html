@@ -1,8 +1,9 @@
 <div class="tda-container">
     <div class="create-div">
-        <button class="btn btn-primary tda-button" (click)="onCreateClicked()"><i class="bi bi-plus"></i></button>
+        <button class="btn btn-primary tda-button" (click)="onCreateClicked()"><i class="bi bi-plus"></i><span
+                class="tda-tooltip-text">Create</span></button>
         <button class="btn btn-warning tda-button" [hidden]="hideCancel" (click)="onCancelClicked()"><i
-                class="bi bi-arrow-bar-left"></i></button>
+                class="bi bi-arrow-bar-left"></i><span class="tda-tooltip-text">Cancel</span></button>
     </div>
     <app-create-task *ngIf="showCreateForm" (taskAdded)="onTaskAdded($event)"></app-create-task>
     <hr class="tda-divider">

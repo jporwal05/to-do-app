@@ -9,9 +9,12 @@
                 rows="5" ngModel required></textarea>
         </div>
         <div>
-            <button class="btn btn-danger tda-button" type="reset"><i class="bi bi-arrow-repeat"></i></button>
+            <button class="btn btn-danger tda-button" type="reset"><i class="bi
+            bi-arrow-repeat"></i>
+                <span class="tda-tooltip-text">Reset</span></button>
             <button class="btn btn-success tda-button" type="submit"
-            [disabled]="!createForm.form.valid"><i class="bi bi-check"></i></button>
+            [disabled]="!createForm.form.valid"><i class="bi bi-check"></i>
+            <span class="tda-tooltip-text">Add</span></button>
         </div>
     </form>
 </div>
