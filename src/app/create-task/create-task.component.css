@@ -1,0 +1,16 @@
+textarea {
+    resize: none;
+    display: block;
+}
+
+.tda-button {
+    margin: 5px 5px 0px 5px;
+}
+
+.tda-input {
+    margin: 5px 0px 0px 5px;
+}
+
+.tda-textarea {
+    margin: 5px 0px 0px 5px;
+}

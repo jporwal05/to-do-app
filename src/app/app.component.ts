@@ -8,17 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'to-do-app';
   showCreateForm = false;
-  disableCancel = true;
+  hideCancel = true;
   taskList: {title: string, content: string}[] = [];
 
   onCreateClicked() {
     this.showCreateForm = true;
-    this.disableCancel = false;
+    this.hideCancel = false;
   }
 
   onCancelClicked() {
     this.showCreateForm = false;
-    this.disableCancel = true;
+    this.hideCancel = true;
   }
 
   onTaskAdded(task: any) {

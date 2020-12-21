@@ -1,0 +1,15 @@
+.tda-container {
+	width: 70vw;
+	margin: auto;
+    height: 200vh;
+}
+
+.tda-button {
+    margin: 5px 5px 0px 5px;
+}
+
+hr.tda-divider {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-width: 2px;
+}
