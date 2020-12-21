@@ -9,8 +9,9 @@
                 rows="5" ngModel required></textarea>
         </div>
         <div>
-            <button class="btn btn-danger tda-button" type="reset">Reset</button>
-            <button class="btn btn-success tda-button" type="submit" [disabled]="!createForm.form.valid">Submit</button>
+            <button class="btn btn-danger tda-button" type="reset"><i class="bi bi-arrow-repeat"></i></button>
+            <button class="btn btn-success tda-button" type="submit"
+            [disabled]="!createForm.form.valid"><i class="bi bi-check"></i></button>
         </div>
     </form>
 </div>
