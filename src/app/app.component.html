@@ -1,7 +1,13 @@
-<button (click)="onCreateClicked()">Create</button>
-<button [disabled]="disableCancel" (click)="onCancelClicked()">Cancel</button>
-<div *ngIf="showCreateForm">
-    <app-create-task (taskAdded)="onTaskAdded($event)"></app-create-task>
+<div class="tda-container">
+    <div class="create-div">
+        <button class="btn btn-primary tda-button" (click)="onCreateClicked()">Create</button>
+        <button class="btn btn-warning tda-button" [hidden]="hideCancel" (click)="onCancelClicked()">Cancel</button>
+    </div>
+    <div>
+        <app-create-task *ngIf="showCreateForm" (taskAdded)="onTaskAdded($event)"></app-create-task>
+    </div>
+    <hr class="tda-divider">
+    <div>
+        <app-task-list [taskList]="taskList"></app-task-list>
+    </div>
 </div>
-<hr>
-<app-task-list [taskList]="taskList"></app-task-list>

@@ -1,10 +1,20 @@
-<form #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
-    <ul>
-        <li><input type="text" name="title" [(ngModel)]="task.title" [readonly]="readOnly" required></li>
-        <li><textarea name="content" id="content" cols="30" rows="5" [readonly]="readOnly" [(ngModel)]="task.content" required></textarea></li>
-    </ul>
-    <button type="submit" [disabled]="!editForm.form.valid" [hidden]="readOnly">Save</button>
-    <button type="button" [hidden]="readOnly" (click)="onCancelClicked()">Cancel</button>
-</form>
-<button (click)="onEditClicked()">Edit</button>
-<button (click)="onDeleteClicked()">Delete</button>
+<div class="tda-div">
+    <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
+        <div>
+            <input class="tda-input" type="text" name="title" [(ngModel)]="task.title" [readonly]="readOnly" required>
+        </div>
+        <div>
+            <textarea class="tda-textarea" name="content" id="content" cols="30" rows="5" [readonly]="readOnly"
+                [(ngModel)]="task.content" required></textarea>
+        </div>
+        <div>
+            <button class="btn btn-success tda-button" type="submit" [disabled]="!editForm.form.valid"
+                [hidden]="readOnly">Save</button>
+            <button class="btn btn-warning tda-button" type="button" [hidden]="readOnly"
+                (click)="onCancelClicked()">Cancel</button>
+            <button class="btn btn-info tda-button" type="button" (click)="onEditClicked()"
+                [disabled]="!readOnly">Edit</button>
+            <button class="btn btn-danger tda-button" type="button" (click)="onDeleteClicked()">Delete</button>
+        </div>
+    </form>
+</div>
