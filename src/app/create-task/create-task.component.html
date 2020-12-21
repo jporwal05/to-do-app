@@ -1,13 +1,16 @@
-<form #createForm="ngForm" (ngSubmit)="onSubmit(createForm.value)">
-    <div>
-        <input class="tda-input" placeholder="Title goes here..." type="text" name="title" id="name" ngModel required>
-    </div>
-    <div>
-        <textarea class="tda-textarea" placeholder="Content goes here..." 
-            name="content" id="content" cols="30" rows="5" ngModel required></textarea>
-    </div>
-    <div>
-        <button class="btn btn-danger tda-button" type="reset">Reset</button>
-        <button class="btn btn-success tda-button" type="submit" [disabled]="!createForm.form.valid">Submit</button>
-    </div>
-</form>
+<div class="create-form-div card">
+    <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm.value)">
+        <div>
+            <input class="tda-input" placeholder="Title goes here..." type="text" name="title" id="name" ngModel
+                required>
+        </div>
+        <div>
+            <textarea class="tda-textarea" placeholder="Content goes here..." name="content" id="content" cols="30"
+                rows="5" ngModel required></textarea>
+        </div>
+        <div>
+            <button class="btn btn-danger tda-button" type="reset">Reset</button>
+            <button class="btn btn-success tda-button" type="submit" [disabled]="!createForm.form.valid">Submit</button>
+        </div>
+    </form>
+</div>
