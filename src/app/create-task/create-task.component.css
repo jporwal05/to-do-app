@@ -4,11 +4,19 @@ textarea {
 }
 
 .create-task-div {
-    background-color: #ffd633;
+    background-color: #acacac;
     margin-top: 5px;
     margin-left: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
     width: 30%;
     border-radius: 2%;
+}
+
+.create-task-div:hover {
+    background-color: #979797;
+}
+
+.tda-input {
+    border-bottom: 1px solid #575757;
 }
