@@ -1,4 +1,4 @@
-<div class="create-task-div card">
+<div class="tda-create-task-div tda-card">
     <form #createForm="ngForm" (ngSubmit)="onSubmit(createForm.value)">
         <div>
             <input class="tda-input" placeholder="Title goes here..." type="text" name="title" id="name" ngModel
@@ -8,7 +8,7 @@
             <textarea class="tda-textarea" placeholder="Content goes here..." name="content" id="content" cols="30"
                 rows="5" ngModel required></textarea>
         </div>
-        <div>
+        <div class="tda-button-div">
             <button class="btn btn-danger tda-button" type="reset"><i class="bi
             bi-arrow-repeat"></i>
                 <span class="tda-tooltip-text">Reset</span></button>

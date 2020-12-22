@@ -3,17 +3,17 @@ textarea {
     display: block;
 }
 
-.create-task-div {
+.tda-create-task-div {
     background-color: #acacac;
     margin-top: 5px;
     margin-left: 5px;
     padding-bottom: 5px;
     padding-right: 5px;
-    width: 30%;
     border-radius: 2%;
+    display: inline-block;
 }
 
-.create-task-div:hover {
+.tda-create-task-div:hover {
     background-color: #979797;
 }
 

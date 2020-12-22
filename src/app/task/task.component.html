@@ -7,7 +7,7 @@
             <textarea class="tda-textarea" name="content" id="content" cols="30" rows="5" [readonly]="readOnly"
                 [(ngModel)]="task.content" required></textarea>
         </div>
-        <div>
+        <div class="tda-button-div">
             <button class="btn btn-success tda-button" type="submit" [disabled]="!editForm.form.valid"
                 [hidden]="readOnly"><i class="bi bi-check"></i><span class="tda-tooltip-text">Save</span></button>
             <button class="btn btn-warning tda-button" type="button" [hidden]="readOnly" (click)="onCancelClicked()"><i
