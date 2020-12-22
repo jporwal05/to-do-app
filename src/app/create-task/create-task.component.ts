@@ -24,5 +24,4 @@ export class CreateTaskComponent implements OnInit {
     };
     this.taskAdded.emit(this.task);
   }
-
 }

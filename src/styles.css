@@ -11,6 +11,11 @@ img {
     max-width: 100%;
 }
 
+.tda-button-div {
+    display: flex;
+    justify-content: center;
+}
+
 .tda-button {
     margin: 5px 0px 0px 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -55,7 +60,7 @@ img {
     width: 80%;
 }
 
-.card {
+.tda-card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     animation: fadeIn ease 2s;
@@ -63,6 +68,10 @@ img {
     -moz-animation: fadeIn ease 2s;
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
+}
+
+.tda-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
 @keyframes fadeIn {
@@ -108,8 +117,4 @@ img {
     100% {
         opacity: 1;
     }
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
