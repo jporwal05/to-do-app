@@ -1,4 +1,4 @@
-<div class="tda-div tda-task-div card">
+<div class="tda-div tda-task-div tda-card">
     <form #editForm="ngForm" (ngSubmit)="onSubmit(editForm.value)">
         <div>
             <input class="tda-input" type="text" name="title" [(ngModel)]="task.title" [readonly]="readOnly" required>
