@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskService } from './task.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,12 @@ export class AppComponent {
   title = 'to-do-app';
   showCreateForm = false;
   hideCancel = true;
-  taskList: {title: string, content: string}[] = [];
+
+  constructor(public taskService: TaskService) {}
+
+  ngOnInit() {
+    this.taskService.getTasks();
+  }
 
   onCreateClicked() {
     this.showCreateForm = true;
@@ -22,6 +28,6 @@ export class AppComponent {
   }
 
   onTaskAdded(task: any) {
-    this.taskList.push(task);
+    this.taskService.addTask(task);
   }
 }
