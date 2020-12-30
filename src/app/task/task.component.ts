@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TaskService } from '../task.service';
 
 @Component({
   selector: 'app-task',
@@ -11,13 +12,13 @@ export class TaskComponent implements OnInit {
   originalTask: any;
   readOnly = true;
 
-  constructor() { }
+  constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
   }
 
   onDeleteClicked() {
-    this.delete.emit(this.task);
+    this.delete.emit(this.task.id);
   }
 
   onEditClicked() {
@@ -34,6 +35,7 @@ export class TaskComponent implements OnInit {
   onSubmit(editForm: any) {
     this.task.title = editForm.title;
     this.task.content = editForm.content;
+    this.taskService.editTask(this.task);
     this.readOnly = true;
   }
 

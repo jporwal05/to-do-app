@@ -8,5 +8,5 @@
     </div>
     <app-create-task *ngIf="showCreateForm" (taskAdded)="onTaskAdded($event)"></app-create-task>
     <hr class="tda-divider">
-    <app-task-list [taskList]="taskList"></app-task-list>
+    <app-task-list [taskList]="taskService.taskList"></app-task-list>
 </div>
