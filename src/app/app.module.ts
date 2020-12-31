@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -10,11 +10,16 @@ import { NavComponent } from './nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TodoComponent } from './todo/todo.component';
 import { RouterModule } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
 
 const routes = [
   {
-    path: '',
+    path: "",
     component: TodoComponent
+  },
+  {
+    path: "register",
+    component: RegisterComponent
   }
 ];
 
@@ -25,12 +30,14 @@ const routes = [
     TaskListComponent,
     CreateTaskComponent,
     NavComponent,
-    TodoComponent
+    TodoComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
