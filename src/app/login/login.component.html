@@ -1,0 +1,19 @@
+<div class="tda-login-div tda-card">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input class="tda-input" placeholder="Email" type="email" name="email" id="email"
+                formControlName="email" required>
+        </div>
+        <div>
+            <input class="tda-input" placeholder="Password" type="password" name="password" id="password"
+                formControlName="password" required>
+        </div>
+        <div class="tda-button-div">
+            <button class="btn btn-danger tda-button" type="reset"><i class="bi
+            bi-arrow-repeat"></i>
+                <span class="tda-tooltip-text">Reset</span></button>
+            <button class="btn btn-success tda-button" type="submit" [disabled]="!loginForm.valid"><i class="bi bi-check"></i>
+                <span class="tda-tooltip-text">Login</span></button>
+        </div>
+    </form>
+</div>
