@@ -14,8 +14,9 @@ export class TaskService {
 
   constructor(private http: HttpClient) { }
 
-  getTasks() {
-    return this.http.get(this.BASE_URL + "/all").subscribe(response => {
+  getTasks(userName: any) {
+    userName = userName ? "/" + userName : "";
+    return this.http.get(this.BASE_URL + "/all" + userName).subscribe(response => {
       let res: any = response;
       this.taskStore = res;
       this.taskSubject.next(this.taskStore);
