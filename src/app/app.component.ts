@@ -8,26 +8,4 @@ import { TaskService } from './task.service';
 })
 export class AppComponent {
   title = 'to-do-app';
-  showCreateForm = false;
-  hideCancel = true;
-
-  constructor(public taskService: TaskService) {}
-
-  ngOnInit() {
-    this.taskService.getTasks();
-  }
-
-  onCreateClicked() {
-    this.showCreateForm = true;
-    this.hideCancel = false;
-  }
-
-  onCancelClicked() {
-    this.showCreateForm = false;
-    this.hideCancel = true;
-  }
-
-  onTaskAdded(task: any) {
-    this.taskService.addTask(task);
-  }
 }

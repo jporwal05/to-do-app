@@ -8,6 +8,15 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { NavComponent } from './nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TodoComponent } from './todo/todo.component';
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  {
+    path: '',
+    component: TodoComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -15,12 +24,14 @@ import { HttpClientModule } from '@angular/common/http';
     TaskComponent,
     TaskListComponent,
     CreateTaskComponent,
-    NavComponent
+    NavComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
