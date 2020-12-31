@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodoComponent } from './todo/todo.component';
 import { RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
   {
     path: "register",
     component: RegisterComponent
+  },
+  {
+    path: "login",
+    component: LoginComponent
   }
 ];
 
@@ -31,7 +36,8 @@ const routes = [
     CreateTaskComponent,
     NavComponent,
     TodoComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

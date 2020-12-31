@@ -8,9 +8,10 @@
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item" [ngStyle]="{'display':
+            <li class="nav-item" routerLink="/login"
+            routerLinkActive="active" [ngStyle]="{'display':
             authService.isAuthenticated ? 'none' : 'inline'}">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" style="cursor: pointer">Login</a>
             </li>
             <li class="nav-item" [ngStyle]="{'display':
             !authService.isAuthenticated ? 'none' : 'inline'}">

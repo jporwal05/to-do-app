@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 import { TaskService } from '../task.service';
 
 @Component({
@@ -10,10 +12,14 @@ export class TodoComponent implements OnInit {
   showCreateForm = false;
   hideCancel = true;
 
-  constructor(public taskService: TaskService) {}
+  constructor(public taskService: TaskService, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
-    this.taskService.getTasks();
+    if (!this.authService.isAuthenticated) {
+      this.router.navigate(["/login"]);
+    } else {
+      this.taskService.getTasks();
+    }
   }
 
   onCreateClicked() {

@@ -23,13 +23,7 @@ export class AuthService {
   register(user: any) {
     delete user.confirmPassword;
     this.http.post(this.BASE_URL + "/register", user).subscribe(response => {
-      let res: any = response;
-      if (!res.token) {
-        return;
-      }
-      localStorage.setItem(this.NAME_KEY, res.firstName);
-      localStorage.setItem(this.TOKEN_KEY, res.token);
-      this.router.navigate(["/"]);
+      this.authenticate(response);
     }, (err) => {
       throw err;
     });
@@ -38,5 +32,24 @@ export class AuthService {
   logout() {
     localStorage.removeItem(this.NAME_KEY);
     localStorage.removeItem(this.TOKEN_KEY);
+    this.router.navigate(["/login"]);
+  }
+
+  login(userData: any) {
+    this.http.post(this.BASE_URL + "/login", userData).subscribe(response => {
+      this.authenticate(response);
+    }, (err) => {
+      throw err;
+    });
+  }
+
+  authenticate(response) {
+    let res: any = response;
+    if (!res.token) {
+      return;
+    }
+    localStorage.setItem(this.NAME_KEY, res.firstName);
+    localStorage.setItem(this.TOKEN_KEY, res.token);
+    this.router.navigate(["/"]);
   }
 }
