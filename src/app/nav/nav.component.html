@@ -1,9 +1,9 @@
 <div>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="border-radius: 4px;">
-        <a class="navbar-brand" href="#">To Do App</a>
+        <a class="navbar-brand" routerLink="/" style="cursor: pointer">To Do App</a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Welcome Jayant</a>
+            <li class="nav-item active" routerLink="/">
+                <a class="nav-link" style="cursor: pointer">Welcome Jayant</a>
             </li>
         </ul>
         <ul class="navbar-nav ml-auto">
@@ -13,8 +13,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Logout</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Register</a>
+            <li class="nav-item" routerLink="/register" routerLinkActive="active">
+                <a class="nav-link" style="cursor: pointer">Register</a>
             </li>
         </ul>
     </nav>

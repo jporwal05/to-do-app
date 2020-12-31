@@ -1,0 +1,31 @@
+<div class="tda-register-div tda-card">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input class="tda-input" placeholder="First name" type="text" name="firstName" id="firstName"
+                formControlName="firstName" required>
+        </div>
+        <div>
+            <input class="tda-input" placeholder="Last name" type="text" name="lastName" id="lastName"
+                formControlName="lastName" required>
+        </div>
+        <div>
+            <input class="tda-input" placeholder="Email" type="email" name="email" id="email" formControlName="email"
+                required>
+        </div>
+        <div>
+            <input class="tda-input" placeholder="Password" type="password" name="password" id="password"
+                formControlName="password" required>
+        </div>
+        <div>
+            <input class="tda-input" placeholder="Confirm password" type="password" name="confirmPassword"
+                formControlName="confirmPassword" id="confirmPassword" required>
+        </div>
+        <div class="tda-button-div">
+            <button class="btn btn-danger tda-button" type="reset"><i class="bi
+            bi-arrow-repeat"></i>
+                <span class="tda-tooltip-text">Reset</span></button>
+            <button class="btn btn-success tda-button" type="submit" [disabled]="!registerForm.valid"><i class="bi bi-check"></i>
+                <span class="tda-tooltip-text">Add</span></button>
+        </div>
+    </form>
+</div>
