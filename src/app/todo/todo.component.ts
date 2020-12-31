@@ -18,7 +18,7 @@ export class TodoComponent implements OnInit {
     if (!this.authService.isAuthenticated) {
       this.router.navigate(["/login"]);
     } else {
-      this.taskService.getTasks();
+      this.taskService.getTasks(this.authService.firstName);
     }
   }
 

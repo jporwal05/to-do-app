@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-create-task',
@@ -7,12 +8,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class CreateTaskComponent implements OnInit {
   @Output() taskAdded = new EventEmitter();
-  task = {
+  task: any = {
     title: '',
     content: ''
   };
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -22,6 +23,7 @@ export class CreateTaskComponent implements OnInit {
       title: createForm.title,
       content: createForm.content
     };
+    this.task.userName = this.authService.firstName;
     this.taskAdded.emit(this.task);
   }
 }
