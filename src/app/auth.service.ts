@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -18,6 +18,10 @@ export class AuthService {
 
   get isAuthenticated() {
     return !!localStorage.getItem(this.TOKEN_KEY);
+  }
+
+  get tokenHeader() {
+    return new HttpHeaders({ "Authorization": "Bearer " + localStorage.getItem(this.TOKEN_KEY)});
   }
 
   register(user: any) {
